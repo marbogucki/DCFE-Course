@@ -1,11 +1,9 @@
-/**
- * Created by Marcin on 2016-06-28.
- */
-
 function bouncer(arr) {
     var arrWithoutFalse = [];
-    for(var i = 0; i< arr.length; i++) {
-        if(arr[i] != false) {
+    var arrLength = arr.length;
+
+    for(var i = 0; i< arrLength; i++) {
+        if(arr[i]) {
             arrWithoutFalse.push(arr[i]);
         }
     }
