@@ -1,6 +1,6 @@
 function bouncer(arr) {
-    function deleteFalse(arr) {
-        return arr != false;
+    function deleteFalse(element) {
+        return element;
     }
     return arr.filter(deleteFalse);
 }
