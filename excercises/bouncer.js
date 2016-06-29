@@ -1,13 +1,8 @@
 function bouncer(arr) {
-    var arrWithoutFalse = [];
-    var arrLength = arr.length;
-
-    for(var i = 0; i< arrLength; i++) {
-        if(arr[i]) {
-            arrWithoutFalse.push(arr[i]);
-        }
+    function deleteFalse(arr) {
+        return arr != false;
     }
-    return arrWithoutFalse;
+    return arr.filter(deleteFalse);
 }
 
 bouncer([7, "ate", "", false, 9]);
