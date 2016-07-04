@@ -1,0 +1,47 @@
+html {
+  font-size: 10px;
+}
+
+* {
+  -webkit-box-sizing: border-box;
+  -moz-box-sizing: border-box;
+  box-sizing: border-box;
+}
+
+body {
+  font-size: 1.4rem;
+  font-family: Arial, sans-serif;
+}
+
+ul, ol {
+  margin-left: 15px;
+  list-style-position: inside;
+}
+ul {
+  list-style-type: disc;
+}
+ol {
+  list-style-type: decimal;
+}
+ul, ol, p {
+  margin-bottom: 10px;
+  line-height: 1.5;
+}
+h1 {
+  font-size: 3.3rem;
+}
+h2 {
+  font-size: 2.8rem;
+}
+h3 {
+  font-size: 2.3rem;
+}
+h4 {
+  font-size: 1.8rem;
+}
+h5 {
+  font-size: 1.3rem;
+}
+h6 {
+  font-size: .8rem;
+}
