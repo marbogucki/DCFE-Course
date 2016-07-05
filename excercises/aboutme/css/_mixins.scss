@@ -5,3 +5,12 @@
   -o-transition: all $time ease-out;
   transition: all $time ease-out;
 }
+
+@mixin responsive-bg-img($width, $height) {
+  background-size: cover;
+  background-position: center center;
+  background-repeat: no-repeat;
+  height: 0;
+  display: block;
+  padding-bottom: percentage($height / $width);
+}
