@@ -1,9 +1,8 @@
-@import "normalize/_normalize";
-
+@import "normalize";
 @import "colors";
 @import "typography";
 
-@import "font-awesome/_font-awesome";
+@import "font-awesome.min";
 
 @import "mixins";
 @import "default";
