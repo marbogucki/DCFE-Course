@@ -24,3 +24,13 @@ ul, ol, p {
   margin-bottom: 10px;
   line-height: 1.5;
 }
+
+.site {
+  display: flex;
+  min-height: 100%;
+  flex-direction: column;
+}
+
+main {
+  flex: 1 0 auto;
+}
