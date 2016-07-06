@@ -1,8 +1,12 @@
 /* == SITE HEADER == */
 .site-header {
-  background-color: #000000;
+  background-color: $color-green;
+  @include box-shadow($h: 1px, $blur: 5px, $color: #6d6d6d);
+  z-index: 1;
+  position: fixed;
+  width: 100%;
   h1 {
-    color: #ffffff;
+    color: $color-white;
     padding: 10px 0;
     text-align: center;
     font-size: 2.4rem;

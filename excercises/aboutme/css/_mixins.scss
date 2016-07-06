@@ -14,3 +14,9 @@
   display: block;
   padding-bottom: percentage($height / $width);
 }
+
+@mixin box-shadow($v: 0, $h: 0, $blur: 1px, $color: rgba(0, 0, 0, 1)){
+  -webkit-box-shadow: $v $h $blur $color;
+  -moz-box-shadow: $v $h $blur $color;
+  box-shadow: $v $h $blur $color;
+}

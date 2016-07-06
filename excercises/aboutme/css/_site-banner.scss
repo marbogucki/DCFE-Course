@@ -1,4 +1,5 @@
 .site-banner {
   margin: 0;
+  padding-top: 48px;
   @include responsive-bg-img(100, 35);
 }
