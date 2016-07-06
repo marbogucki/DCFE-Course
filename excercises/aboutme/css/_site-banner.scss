@@ -1,3 +1,4 @@
 .site-banner {
+  margin: 0;
   @include responsive-bg-img(100, 35);
 }
