@@ -21,15 +21,19 @@
     margin-right: 10px;
     a {
       display: block;
-      color: $color-white;
       border: 1px solid $color-white;
       width: 28px;
       height: 25px;
-      text-align: center;
-      line-height: 25px;
       @include transition(.3s);
+      img {
+        fill: $color-white;
+        color: $color-white;
+        width: 13px;
+        margin-left: auto;
+        margin-right: auto;
+        vertical-align: middle;
+      }
       &:hover {
-        color: $color-grey;
         background-color: $color-white;
       }
     }
