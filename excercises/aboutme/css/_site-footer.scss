@@ -24,17 +24,29 @@
       border: 1px solid $color-white;
       width: 28px;
       height: 25px;
+      padding: 15px;
+      background-size: 1.6rem;
+      background-repeat: no-repeat;
+      background-position: center center;
       @include transition(.3s);
-      img {
-        fill: $color-white;
-        color: $color-white;
-        width: 13px;
-        margin-left: auto;
-        margin-right: auto;
-        vertical-align: middle;
-      }
       &:hover {
         background-color: $color-white;
+      }
+    }
+  }
+}
+
+$icon-list: 'fb', 'lin', 'twitter';
+@each $icon in $icon-list {
+  .social-icon {
+    a {
+      &.icon-#{$icon} {
+        background-image: url('../images/icon-#{$icon}.svg');
+      }
+      &:hover {
+        &.icon-#{$icon} {
+          background-image: url('../images/icon-#{$icon}-hover.svg');
+        }
       }
     }
   }
