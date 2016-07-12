@@ -1,12 +1,15 @@
 html, body {
   height: 100%;
 }
+
 * {
   -webkit-box-sizing: border-box;
   -moz-box-sizing: border-box;
   box-sizing: border-box;
 }
+
 %clearfix {
+
   &::after {
     content: "";
     display: block;
@@ -15,11 +18,13 @@ html, body {
     clear: both;
   }
 }
+
 %list-reset {
   margin: 0;
   padding: 0;
   list-style-type: none;
 }
+
 ul, ol, p {
   margin-bottom: 10px;
   line-height: 1.5;
