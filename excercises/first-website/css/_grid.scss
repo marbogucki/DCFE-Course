@@ -24,15 +24,15 @@ $pad: 20px;
 }
 
 [class*='col-'] {
-  padding-left: $pad;
-  padding-right: $pad;
+  //padding-left: $pad;
+  //padding-right: $pad;
   @media #{$device-small} {
     float: left;
-    padding-right: $pad;
+    //padding-right: $pad;
   }
   @media #{$device-larger} {
-    padding-left: 0;
-    padding-riight: 0;
+    //padding-left: 0;
+    //padding-riight: 0;
     .grid &:last-of-type {
       padding-right: 0;
     }
