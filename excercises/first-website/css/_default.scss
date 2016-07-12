@@ -24,11 +24,6 @@
   padding: 0;
 }
 
-$device-small: 480px;
-$device-medium: 640px;
-
-$container-inside: 1520px;
-
 html, body {
   height: 100%;
 }
@@ -36,7 +31,6 @@ html, body {
 p {
   line-height: 1.5;
 }
-
 .container-inside {
   margin: 0 auto;
   max-width: $container-inside;

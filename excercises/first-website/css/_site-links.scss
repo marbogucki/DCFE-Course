@@ -1,9 +1,15 @@
 .site-links {
+  display: block;
+  margin-top: 60px;
+  margin-bottom: 120px;
   ul {
     @extend %list-reset;
     li {
       margin-bottom: 15px;
       text-align: center;
+      @media #{$device-small} {
+        text-align: left;
+      }
     }
   }
 }
@@ -33,18 +39,8 @@
       text-decoration: underline;
     }
   }
-}
-
-@media screen and (min-width: $device-small) {
-  .site-links {
-    ul {
-      li {
-        text-align: left;
-      }
-    }
-  }
-  .site-links {
-    h3, p {
+  h3, p {
+    @media #{$device-small} {
       text-align: left;
     }
   }
