@@ -1,0 +1,51 @@
+.site-links {
+  ul {
+    @extend %list-reset;
+    li {
+      margin-bottom: 15px;
+      text-align: center;
+    }
+  }
+}
+
+.site-links {
+  h3 {
+    @extend %elem-reset;
+    margin: 40px 0;
+    font-family: $Amiko, sans-serif;
+    font-weight: 700;
+    text-transform: uppercase;
+    font-size: 1.4rem;
+    text-align: center;
+  }
+  p, a {
+    color: $color-links;
+    font-size: 1.3rem;
+    font-style: italic;
+  }
+  p {
+    text-align: justify;
+    line-height: 2;
+  }
+  a {
+    text-decoration: none;
+    &:hover {
+      text-decoration: underline;
+    }
+  }
+}
+
+@media screen and (min-width: $device-small) {
+  .site-links {
+    ul {
+      li {
+        text-align: left;
+      }
+    }
+  }
+  .site-links {
+    h3, p {
+      text-align: left;
+    }
+  }
+}

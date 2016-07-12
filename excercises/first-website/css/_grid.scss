@@ -1,0 +1,40 @@
+/* == grid system == */
+$grid-pad: 20px;
+
+
+.grid {
+  &::before,
+  &::after {
+    content: "";
+    display: table;
+    clear: both;
+  }
+  [class*='col-'] {
+    padding: $grid-pad;
+  }
+}
+
+
+
+@media screen and (min-width: $device-small) {
+  .grid {
+    [class*='col-'] {
+      float:left;
+      padding: $grid-pad;
+      &:last-child {
+        padding-right: 0;
+      }
+    }
+    .col-1-2 {
+      width: 50%;
+    }
+  }
+}
+
+@media screen and (min-width: $device-medium) {
+  .grid {
+    .col-1-4 {
+      width: 25%;
+    }
+  }
+}

@@ -1,0 +1,12 @@
+/* == typography document style == */
+$Amiko: 'Amiko';
+$Merriweather: 'Merriweather';
+
+html {
+  font-size: 10px;
+}
+body {
+  font-family: $Merriweather, serif;
+  font-size: 1.4rem;
+  color: $color-black;
+}
