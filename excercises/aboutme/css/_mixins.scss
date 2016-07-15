@@ -1,0 +1,22 @@
+@mixin transition($time) {
+  -webkit-transition: all $time ease-out;
+  -moz-transition: all $time ease-out;
+  -ms-transition: all $time ease-out;
+  -o-transition: all $time ease-out;
+  transition: all $time ease-out;
+}
+
+@mixin responsive-bg-img($width, $height) {
+  background-size: cover;
+  background-position: center center;
+  background-repeat: no-repeat;
+  height: 0;
+  display: block;
+  padding-bottom: percentage($height / $width);
+}
+
+@mixin box-shadow($v: 0, $h: 0, $blur: 1px, $color: rgba(0, 0, 0, 1)){
+  -webkit-box-shadow: $v $h $blur $color;
+  -moz-box-shadow: $v $h $blur $color;
+  box-shadow: $v $h $blur $color;
+}

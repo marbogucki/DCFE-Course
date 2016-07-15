@@ -1,0 +1,41 @@
+html, body {
+  height: 100%;
+}
+
+* {
+  -webkit-box-sizing: border-box;
+  -moz-box-sizing: border-box;
+  box-sizing: border-box;
+}
+
+%clearfix {
+
+  &::after {
+    content: "";
+    display: block;
+    height: 0;
+    visibility: visible;
+    clear: both;
+  }
+}
+
+%list-reset {
+  margin: 0;
+  padding: 0;
+  list-style-type: none;
+}
+
+ul, ol, p {
+  margin-bottom: 10px;
+  line-height: 1.5;
+}
+
+.site {
+  display: flex;
+  min-height: 100%;
+  flex-direction: column;
+}
+
+main {
+  flex: 1 0 auto;
+}
