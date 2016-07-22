@@ -45,7 +45,7 @@
         text-transform: uppercase;
         border-radius: 40px;
         z-index: 2;
-        @include transition($duration: .5s);
+        @include transition();
 
         &:hover {
           background-color: darken($header-link-color, 20%);
@@ -63,6 +63,28 @@
         margin-top: -1px;
         background-color: $header-link-color;
         z-index: 1;
+      }
+    }
+  }
+}
+
+.site-header {
+
+  .logo {
+    position: absolute;
+    top: 45px;
+    margin-top: 0;
+
+    a {
+      display: inline-block;
+      @include transition();
+
+      img {
+        width: 150px;
+      }
+
+      &:hover {
+        opacity: .7;
       }
     }
   }
