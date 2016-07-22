@@ -1,0 +1,71 @@
+.places {
+  @extend %display-flex;
+  -webkit-flex-direction: column;
+  flex-direction: column;
+
+  @include rwd(sm) {
+    -webkit-flex-direction: row;
+    flex-direction: row;
+    -webkit-flex-wrap: wrap;
+    flex-wrap: wrap;
+  }
+
+  .place {
+    position: relative;
+    height: 300px;
+    text-align: center;
+    color: $places-text-color;
+    cursor: pointer;
+    background-size: cover;
+    backgrounud-position: center center;
+    @extend %display-flex;
+    -webkit-align-items: flex-end;
+    align-items: flex-end;
+    -webkit-justify-content: center;
+    justify-content: center;
+    padding-bottom: 50px;
+
+    @include rwd(sm) {
+      width: 50%;
+    }
+
+    @include rwd(lg) {
+      width: 25%;
+    }
+
+    .place-heading {
+      z-index: 1;
+    }
+
+    &::before {
+      content: "";
+      display: block;
+      position: absolute;
+      top: 0;
+      left: 0;
+      bottom: 0;
+      right: 0;
+      background: rgba(0, 0, 0, .6);
+      opacity: 0;
+      transform: scale(.3);
+      @include transition();
+    }
+
+    &:hover {
+      &::before {
+        opacity: 1;
+        transform: scale(1);
+      }
+    }
+
+    $places-list: place-01, place-02, place-03, place-04;
+
+    @each $place-item in $places-list {
+      &.#{$place-item} {
+        background-image: url('../images/#{$place-item}.jpg');
+      }
+    }
+
+  }
+}
+

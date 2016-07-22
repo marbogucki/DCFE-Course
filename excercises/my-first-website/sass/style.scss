@@ -2,6 +2,7 @@
 @import "base/normalize";
 @import "base/typography";
 @import "base/colors";
+@import "base/rwd-break-point";
 @import "base/default";
 
 /* ========== helpers ========== */
@@ -12,4 +13,7 @@
 @import "layout/header";
 @import "layout/navigation";
 @import "layout/footer";
+
+/* ========== pages ========== */
+@import "pages/home-places";
 
