@@ -1,0 +1,16 @@
+%clearfix {
+
+  &::after {
+    content: '';
+    display: block;
+    height: 0;
+    visibility: visible;
+    clear: both;
+  }
+}
+
+%reset-list {
+  list-style-type: none;
+  margin: 0;
+  padding: 0;
+}

@@ -1,0 +1,22 @@
+.site-navigation {
+
+  ul {
+    @extend %reset-list;
+    text-align: center;
+
+    li {
+      display: inline-block;
+      margin: 0 16px;
+
+      a {
+        text-decoration: none;
+        text-transform: uppercase;
+        color: $header-text-color;
+
+        &:hover {
+          text-decoration: underline;
+        }
+      }
+    }
+  }
+}
