@@ -1,13 +1,10 @@
 .places {
   @extend %display-flex;
-  -webkit-flex-direction: column;
-  flex-direction: column;
+  @include flex-direction();
 
   @include rwd(sm) {
-    -webkit-flex-direction: row;
-    flex-direction: row;
-    -webkit-flex-wrap: wrap;
-    flex-wrap: wrap;
+    @include flex-direction(row);
+    @include flex-wrap();
   }
 
   .place {
@@ -18,12 +15,10 @@
     cursor: pointer;
     background-size: cover;
     backgrounud-position: center center;
-    @extend %display-flex;
-    -webkit-align-items: flex-end;
-    align-items: flex-end;
-    -webkit-justify-content: center;
-    justify-content: center;
     padding-bottom: 50px;
+    @extend %display-flex;
+    @include align-items(flex-end);
+    @include justify-content(center);
 
     @include rwd(sm) {
       width: 50%;
