@@ -13,9 +13,11 @@
         text-transform: uppercase;
         color: $header-text-color;
         font-size: 1.4rem;
+        @include transition();
 
         &:hover {
-          text-decoration: underline;
+          opacity: .6;
+          border-bottom: 1px solid $header-text-color;
         }
       }
     }
