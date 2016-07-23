@@ -11,13 +11,13 @@
       a {
         text-decoration: none;
         text-transform: uppercase;
-        color: $header-text-color;
+        color: $white;
         font-size: 1.4rem;
         @include transition();
 
         &:hover {
           opacity: .6;
-          border-bottom: 1px solid $header-text-color;
+          border-bottom: 1px solid $white;
         }
       }
     }

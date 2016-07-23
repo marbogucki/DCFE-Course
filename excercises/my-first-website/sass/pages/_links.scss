@@ -1,0 +1,72 @@
+.links {
+  @extend %display-flex;
+  @include flex-direction();
+
+  @include rwd(sm) {
+    @include flex-direction(row);
+    @include flex-wrap();
+  }
+
+  .links-box {
+    @extend %reset-list;
+    text-align: center;
+    padding-left: 2rem;
+    padding-right: 2rem;
+
+    @include rwd(sm) {
+      width: 50%;
+      text-align: left;
+    }
+
+    @include rwd(md) {
+      width: 25%;
+    }
+
+    @include rwd(xl) {
+      padding-left: 0;
+      padding-right: 0;
+    }
+  }
+}
+
+
+.links-box__heading {
+  text-transform: uppercase;
+  font-size: 1rem;
+  margin-top: 10rem;
+  margin-bottom: 3.5rem;
+}
+
+.links-box__url {
+  margin-bottom: 1.3rem;
+
+  a {
+    color: $grey-light;
+    font-style: italic;
+    font-size: 1.3rem;
+    font-family: $Merriweather, serif;
+    text-decoration: none;
+
+    &:hover {
+      text-decoration: underline;
+    }
+  }
+}
+
+.links-box__info {
+  text-align: justify;
+  margin-bottom: 10rem;
+  color: $grey-light;
+  font-style: italic;
+  font-size: 1.3rem;
+  font-family: $Merriweather, serif;
+
+  @include rwd(md) {
+    text-align: left;
+  }
+
+
+  p {
+    line-height: 1.8;
+  }
+}

@@ -1,0 +1,15 @@
+.site-footer {
+  background-color: $black;
+  width: 100%;
+  height: 96px;
+  text-align: center;
+  @extend %display-flex;
+  @include align-items(center);
+  @include justify-content(center);
+}
+
+.site-footer__copyright {
+  color: $grey;
+  font-style: italic;
+  font-size: 1.2rem;
+}
