@@ -46,38 +46,50 @@
   display: inline-block;
   margin-top: 10rem;
 
-  @include rwd(md) {
-    width: 500px;
-  }
+  padding: 1.7rem 4.7rem;
+  background-color: $pink;
+  color: $white;
+  text-decoration: none;
+  text-transform: uppercase;
+  border-radius: 40px;
+  z-index: 2;
+  @include transition();
 
-  a {
-    position: relative;
-    display: inline-block;
-    padding: 1.7rem 4.7rem;
-    background-color: $pink;
-    color: $white;
-    text-decoration: none;
-    text-transform: uppercase;
-    border-radius: 40px;
-    z-index: 2;
-    @include transition();
+  &:hover {
+    background-color: darken($pink, 20%);
 
-    &:hover {
+    &::after,
+    &::before {
       background-color: darken($pink, 20%);
     }
   }
 
-  &::after {
+  &::after,
+  &::before {
     position: absolute;
     content: "";
     display: inline-block;
-    width: 100%;
+    width: 0;
     height: 1px;
     top: 50%;
-    left: 0;
-    margin-top: -1px;
     background-color: $pink;
-    z-index: 1;
+    @include transition();
+
+    @include rwd(xs) {
+      width: 80px;
+    }
+
+    @include rwd(sm) {
+      width: 150px;
+    }
+  }
+
+  &::after {
+    left: 100%;
+  }
+
+  &::before {
+    right: 100%;
   }
 }
 

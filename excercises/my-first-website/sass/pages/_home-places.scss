@@ -15,10 +15,10 @@
     cursor: pointer;
     background-size: cover;
     background-position: center center;
-    padding-bottom: 50px;
+    padding-bottom: 2rem;
     @extend %display-flex;
-    @include align-items(flex-end);
-    @include justify-content(center);
+    @include flex-direction(column);
+    @include justify-content(flex-end);
 
     @include rwd(sm) {
       width: 50%;
@@ -28,19 +28,25 @@
       width: 25%;
     }
 
-    .place-heading {
-      z-index: 1;
 
-      h2 {
-        text-transform: uppercase;
-        font-size: 1.2rem;
-        margin-bottom: 0;
-      }
+    &__heading,
+    &__text {
+      z-index: 2;
+      position: relative;
+    }
 
-      p {
-        margin-top: 0;
-        font-style: italic;
-      }
+    &__heading {
+      vertical-align: bottom;
+      font-size: 1.2rem;
+      margin-bottom: 0;
+      text-transform: uppercase;
+
+    }
+
+    &__text {
+      margin-top: .3rem;
+      font-style: italic;
+      font-size: 1.2rem;
     }
 
     &::before {
@@ -55,6 +61,7 @@
       opacity: 0;
       transform: scale(.3);
       @include transition();
+      z-index: 1;
     }
 
     &:hover {
