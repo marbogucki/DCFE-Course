@@ -1,0 +1,28 @@
+%clearfix {
+
+  &::after {
+    content: '';
+    display: block;
+    height: 0;
+    visibility: visible;
+    clear: both;
+  }
+}
+
+%reset-list {
+  list-style-type: none;
+  margin: 0;
+  padding: 0;
+}
+
+%hide-text {
+  color: transparent;
+  font-size: 0;
+  text-indent: 101%;
+  overflow: hidden;
+  white-space: nowrap;
+}
+
+%display-flex {
+  @include display-flex();
+}

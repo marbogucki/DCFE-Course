@@ -1,0 +1,50 @@
+/* ===== display flex ==== */
+@mixin display-flex() {
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -moz-flex;
+  display: -ms-flexbox;
+  display: flex;
+}
+
+/* ===== flex direction ==== */
+@mixin flex-direction($direction: column) {
+  -webkit-flex-direction: $direction;
+  -moz-flex-direction: $direction;
+  -ms-flex-direction: $direction;
+  -o-flex-direction: $direction;
+  flex-direction: $direction;
+}
+
+/* ===== flex wrap ==== */
+@mixin flex-wrap($wrap: wrap) {
+  -webkit-flex-wrap: $wrap;
+  -moz-flex-wrap: $wrap;
+  -ms-flex-wrap: $wrap;
+  -o-flex-wrap: $wrap;
+  flex-wrap: $wrap;
+}
+
+/* ===== align items ==== */
+@mixin align-items($ai: flex-start) {
+  @if $ai == flex-start {
+    -webkit-box-align: start;
+    -ms-flex-align: start;
+  } @else if $ai == flex-end {
+    -webkit-box-align: end;
+    -ms-flex-align: end;
+  } @else {
+    -webkit-box-align: $ai;
+    -ms-flex-align: $ai;
+  }
+  -webkit-align-items: $ai;
+  -moz-align-items: $ai;
+  -ms-align-items: $ai;
+  align-items: $ai;
+}
+
+/* ===== justify content ==== */
+@mixin justify-content($jc: flex-start) {
+  -webkit-justify-content: $jc;
+  justify-content: $jc;
+}

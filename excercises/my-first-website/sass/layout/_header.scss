@@ -1,0 +1,200 @@
+.site-header {
+  position: relative;
+  background-image: url('../images/banner.jpg');
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-position: center;
+  width: 100%;
+  padding-top: 40px;
+
+  @include rwd(lg) {
+    height: 100vh;
+    padding-top: 80px;
+  }
+
+  .intro {
+    max-width: 500px;
+    margin-left: auto;
+    margin-right: auto;
+    color: $white;
+    text-align: center;
+    padding-top: 4rem;
+    padding-bottom: 4rem;
+
+    @include rwd(xl) {
+      transform: translateY(50%);
+    }
+
+    .intro__heading {
+      margin: 0;
+      font-family: $headline-main-font, serif;
+      font-weight: 400;
+      font-size: 8rem;
+    }
+
+    .intro__text {
+      font-size: 1.6rem;
+      font-weight: 400;
+      margin-top: 2.5rem;
+    }
+  }
+}
+
+
+.intro__link {
+  position: relative;
+  display: inline-block;
+  margin-top: 10rem;
+
+  padding: 1.7rem 4.7rem;
+  background-color: $pink;
+  color: $white;
+  text-decoration: none;
+  text-transform: uppercase;
+  border-radius: 40px;
+  z-index: 2;
+  @include transition();
+
+  &:hover {
+    background-color: darken($pink, 20%);
+
+    &::after,
+    &::before {
+      background-color: darken($pink, 20%);
+    }
+  }
+
+  &::after,
+  &::before {
+    position: absolute;
+    content: "";
+    display: inline-block;
+    width: 0;
+    height: 1px;
+    top: 50%;
+    background-color: $pink;
+    @include transition();
+
+    @include rwd(xs) {
+      width: 80px;
+    }
+
+    @include rwd(sm) {
+      width: 150px;
+    }
+  }
+
+  &::after {
+    left: 100%;
+  }
+
+  &::before {
+    right: 100%;
+  }
+}
+
+
+.site-header {
+
+  .logo {
+    text-align: center;
+    margin-top: 0;
+
+    @include rwd(md) {
+      position: absolute;
+      top: -35px;
+    }
+
+    a {
+      display: inline-block;
+      @include transition();
+
+      img {
+        width: 150px;
+      }
+
+      &:hover {
+        opacity: .7;
+      }
+    }
+  }
+}
+
+.site-header {
+
+  .navigation-search {
+    @extend %reset-list;
+    text-align: center;
+
+    @include rwd(md) {
+      position: absolute;
+      top: -10px;
+      right: 0;
+    }
+
+    li {
+      display: inline-block;
+      margin: 10px 25px 40px;
+
+      @include rwd(md) {
+        margin-left: 35px;
+      }
+
+      a {
+        @extend %hide-text;
+        width: 36px;
+        height: 36px;
+        display: block;
+        @extend %sprite;
+        @include transition();
+
+        &:hover {
+          opacity: .6;
+        }
+      }
+
+      &.menu {
+
+        a {
+          background-position: -178px -22px;
+        }
+      }
+
+      &.search {
+
+        a {
+          background-position: -121px -22px;
+        }
+      }
+    }
+  }
+}
+
+.site-header {
+
+  .link-play {
+    @extend %hide-text;
+    @extend %sprite;
+    position: relative;
+    width: 90px;
+    height: 90px;
+    display: block;
+    background-position: 5px 5px;
+    border: 0;
+    cursor: pointer;
+    background-color: transparent;
+    margin: 5rem auto 0;
+    bottom: 5rem;
+
+    @include rwd(lg) {
+      position: absolute;
+      left: 50%;
+      bottom: 40px;
+      margin-left: -45px;
+    }
+
+    &:hover {
+      background-position: 5px -87px;
+    }
+  }
+}
