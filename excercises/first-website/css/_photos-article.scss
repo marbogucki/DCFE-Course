@@ -1,0 +1,7 @@
+.photos-article {
+  figure {
+    @include responsive-bg-img(100%, 60%);
+    margin: 0;
+    cursor: pointer;
+  }
+}
